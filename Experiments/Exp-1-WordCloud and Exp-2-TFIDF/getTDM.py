@@ -1,5 +1,5 @@
-mat = []
-l = []
+# this program is made to organise the result recieved as output from TFIDF.java.
+# this program organises the output in as a Matrix
 with open('tfidfnewdata.txt', 'r') as f:
     l = [[num for num in line.split('\t')] for line in f]
 
