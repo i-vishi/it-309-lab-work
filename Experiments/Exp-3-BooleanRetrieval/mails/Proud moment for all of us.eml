@@ -1,0 +1,220 @@
+Delivered-To: 201752009@iiitvadodara.ac.in
+Received: by 2002:a67:fa4a:0:0:0:0:0 with SMTP id j10csp349402vsq;
+        Tue, 10 Sep 2019 22:14:41 -0700 (PDT)
+X-Received: by 2002:a1f:1c17:: with SMTP id c23mr8001516vkc.24.1568178881273;
+        Tue, 10 Sep 2019 22:14:41 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1568178881; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=KDgbgOcLzSpC7Lvk08VD5/K2W2YWem/hZp/GHqFxZbMMquoH0uIcDqHYNVTVsO7oVh
+         BZaRqOpbc+MxU4xI7aFDW8vpjDFOThC1nW1OaTiIo8147BXKDpvVH3VvEzr6MZ3a8Onb
+         tFPVpb/n8s7TRfhbopICxO/H+n03vszJZ10wVbG+AUmziFGhh908q8dMv7L6uyRA85+6
+         NQutgNcEHA66aWek2WwuAOY/XiGkPaUFnkZQ/SIG+j/2uTiseO/RGr/HWO+OX73+376z
+         zFNC7BJKEkQxjBaQYDKw4nMjUq3AWGkANDxEJZbbdfRxzD9lWmftRAi0xbPRUGI0r00t
+         5duQ==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=G5awK6lCFj/HzH2lugl07j86BEmL6j05vdGyzsEKhmg=;
+        b=PtSZ2KKrfhiglRkvxUP8CkhcXo2AZUv453m9LF+s+KEWY9my21V93YLA7VCMFPyAEb
+         kS09TIzLhe5vXQc/VN1Qc45W9f4P642i9DRTGl6o6Lt3PSnxTHkjqDdR4ga+fGNBp1wU
+         3j63qAc3iio4xahQbLUuRzvOB0csKFMSGk5DcF2OwuWQvBvjIi4SBgRK0onWh9sOngm4
+         hPPQfIKs0WFx8Rl78zozfhSh88LTVrpJFAucC9nB4pfa1flNZPo4SNFdCAgwuAWM3Ipw
+         ToI3aZh3tXH/WNltAEInUFKmF4g7KotrPeTdfW5zBhCx9VNyjNVX83qTf1NQA2TkV9Ej
+         DKmQ==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=SYtIzWOr;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbdm3psnjuiprbqef4lvqkgqefdmy3ay@iiitvadodara.ac.in) smtp.mailfrom=students+bncBDM3PSNJUIPRBQEF4LVQKGQEFDMY3AY@iiitvadodara.ac.in
+Return-Path: <students+bncBDM3PSNJUIPRBQEF4LVQKGQEFDMY3AY@iiitvadodara.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id v62sor5639210vkd.24.2019.09.10.22.14.41
+        for <201752009@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Tue, 10 Sep 2019 22:14:41 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbdm3psnjuiprbqef4lvqkgqefdmy3ay@iiitvadodara.ac.in) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=SYtIzWOr;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbdm3psnjuiprbqef4lvqkgqefdmy3ay@iiitvadodara.ac.in) smtp.mailfrom=students+bncBDM3PSNJUIPRBQEF4LVQKGQEFDMY3AY@iiitvadodara.ac.in
+ARC-Seal: i=2; a=rsa-sha256; t=1568178881; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=K0R6IMliqEHiVU0djcycVrixQIxl3ULTEe+zXlejNeUbPV6l1fj+SYTtBp2knO2JGS
+         DmF2XsJVeNBrxXky0hk64VPqvJgwzpU+dn4Q3HgNKCF164RzKWQYkSsJXSmoeMDf4/Ep
+         iEA9/tmJy1IMtGhXz+qNr5d13DI+qT0JWjq9Qv8G0IQzeJmYF27MUEByPv5P0wwkvxa5
+         x9he4gz0GLpAtGtrsR8YX7bObqMdZN819wiy08CXEladZCqcsFguPaCn41ssfsc3jmI1
+         Msvl55kFKNpwqw9uu6vEsx1bQdnnO97yLHGux8l2KINmSl7GkFkt/hH+O3/UFR1QSqXp
+         /SIg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=G5awK6lCFj/HzH2lugl07j86BEmL6j05vdGyzsEKhmg=;
+        b=Z1OhIglK/4IIO+1iMBpUXxurEnw2/qDdP8wu17rxr2Kldj7+JMmu38hlqZMTB0ABrk
+         Hfh5nUfXMivMJDsHlG14BXSXN7inxHf9ad+aLnMuBvUxRHjEjBCQqkl4t1+L0PdPVxa2
+         tvNASKm4niE2N7iXEk45Wy5jjLIXbFcKZi1sMVbnPC8ukwUF2JsJZmqS4FDfdnUjJQ8V
+         R9qUR6PJJQ+t4wijQhC3KSCSX9fOwbT7/PF7o34EoUgjmeYk4wpxtyDlivT5gvZJlHLM
+         SKIj1oUSKB+04enD/4LmcR10XwHn/xpXsmFH9BnEMKosZfvBvH40KuLGVftXeEtxM3si
+         nRig==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=emByReve;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of ashish_p@iiitvadodara.ac.in) smtp.mailfrom=ashish_p@iiitvadodara.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiitvadodara-ac-in.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=G5awK6lCFj/HzH2lugl07j86BEmL6j05vdGyzsEKhmg=;
+        b=SYtIzWOrA3Eni0pklYAgelhUwCexi8dg09dkuwZZxXxX1OtSgYC3n6L3H/DQJyfxct
+         K0jxrvXKO9oICJ/yfod/YWFPKdkMOYEQ+8ovps5bE29NkuqRPgMjymGFJkb/Acc4FfTg
+         5uUyBjSts1chtQluLCTttq74ghBYRkYLF1HibRQSiCvS3PSosuKLh/hjO22AJyPUjwD1
+         p30eZ6/7ruRJIKlYZQ1iNz5LQAnluLxFqOGJkhTWnQuqcexG2pUj08uLtRlROL2h7xeE
+         jeCZ2EIbwzj5N3GlIZU4xXwH61N6AFTCCNBTMVb/01ZVQ+U6dH8xEMUUEpEeghjs/Whe
+         1QCQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=G5awK6lCFj/HzH2lugl07j86BEmL6j05vdGyzsEKhmg=;
+        b=ojpdIxeLtt0Pa3QoewGWpTk/4zb3U9YoGb3+SkbuowrYpvjQQ+jCvG9zVL/eMK4t5G
+         c4DsPnEIeDw5pWrSXzIfOy34dd33Pkw6nBY1AdCd44RuP6Nh5tRqbAJ9+o8aX1DqP7VP
+         IFsLClvMcRBswgGHDt6ckl5yHV8WU38okVIDfVGAeHMm3NQFtz63DNSTvSXNMR8IKJ4i
+         NUmkyFf6R4Typ5kt50asfmUlJilp3gDJz+DNB8h4uYHasw5UmCRPSyRZvmvGJYr1Gc3m
+         yM57hGpeOE58Kpfx44QdtUCEIw8He35RUKEW/GWkN254iL5D0IqZlgg/FG3zU/lZ+5ce
+         JzqA==
+X-Gm-Message-State: APjAAAWJK8f6Qq0ZZEI82MyTe4A1BBDoHXbZDZIIPfWAsKydv63xi6Ra
+	SumYXiYbSZE5U/8mEsZDNfv21/ho
+X-Google-Smtp-Source: APXvYqx2RmaYkxN2P605VEfYm/XsnXfsC6Zk9w/XyD3FL2DjEPXIis6ZRDxS7x+PkLpw0Z3lLueUEg==
+X-Received: by 2002:a1f:6681:: with SMTP id a123mr16138298vkc.81.1568178880915;
+        Tue, 10 Sep 2019 22:14:40 -0700 (PDT)
+X-BeenThere: students@iiitvadodara.ac.in
+Received: by 2002:ab0:4a03:: with SMTP id q3ls1032155uae.3.gmail; Tue, 10 Sep
+ 2019 22:14:40 -0700 (PDT)
+X-Received: by 2002:ab0:6585:: with SMTP id v5mr10273763uam.78.1568178879889;
+        Tue, 10 Sep 2019 22:14:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1568178879; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kgXvugma7Wr7p4IoqafEBxd8Z/D0XAd9ta8TMMa5VG4YTQZJVHArSMlziZ9BI6qq1K
+         yzwOW7r48Yvp/sLl9904J6tRS91mfhjdiGUgokrSZBspcsGK57CE5I2Tro2A9kAxhnD+
+         JukEtJCMS8nty9day6J0Lsp32Xb47u4LzbANIZskkICCdN7ryXkDye16rzjX9YXtEdIb
+         gkHPB+EJoEGuWJqv46R6jPR5s5NLdt0T6v9xUvOtxf/JieS7VCg7UHeXIvy++pXSXjsV
+         +OB6/g3KNny9kiF2vkFW15moRd2YBUMJrR7y1uAelnr1tFlguKvmiwT/zTdn8xb5QH7m
+         /FWg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=G5awK6lCFj/HzH2lugl07j86BEmL6j05vdGyzsEKhmg=;
+        b=JnGYzDBlyiGXGUza1ODXi7cAVJ+Md10MNrq3JeGXs+qXEqthploDD8rxRvmkbG2tpC
+         4MK+O3tfyp/VlDLSTH+O6qhSnaDGC6rsNMeEiuKx/oMEGD8/8dk1Tl/c3RH0WwQLimK6
+         RkUeC9r0RbiHPcZIXIsS+zu0mrVMQGsq3MoIjqBBasa0VH5xnyvYiVLTiTOUxahPuLSK
+         qIKH6FS7b1v6G8C4lqhYtwYFH9yTkX75CZEvQUMdFsV1PakHzOE4IJ71GGkubmZDR3s2
+         zvvqD05BjwwAZ6Mhge2OZ2MfEhp2X6obHA+ewBP2L5vCFnbYyll5WnJQFCnaY5OZ9tVy
+         t/eA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=emByReve;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of ashish_p@iiitvadodara.ac.in) smtp.mailfrom=ashish_p@iiitvadodara.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s11sor6418309vsq.74.2019.09.10.22.14.39
+        for <students@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Tue, 10 Sep 2019 22:14:39 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of ashish_p@iiitvadodara.ac.in) client-ip=209.85.220.41;
+X-Received: by 2002:a67:5f45:: with SMTP id t66mr6191294vsb.204.1568178879248;
+ Tue, 10 Sep 2019 22:14:39 -0700 (PDT)
+MIME-Version: 1.0
+From: Ashish Phophalia <ashish_p@iiitvadodara.ac.in>
+Date: Wed, 11 Sep 2019 10:44:30 +0530
+Message-ID: <CACxmMOcMQURwC9X=_PMnzDw1JCzQJaQdq79-euxRiA8aU6cY5Q@mail.gmail.com>
+Subject: Proud moment for all of us
+To: All Students of IIIT Vadodara <students@iiitvadodara.ac.in>, faculty <faculty@iiitvadodara.ac.in>
+Cc: Director IIITV <director@iiitvadodara.ac.in>, 
+	PLACEMENT IIIT-V <placement@iiitvadodara.ac.in>
+Content-Type: multipart/alternative; boundary="0000000000000ad563059240197b"
+X-Original-Sender: ashish_p@iiitvadodara.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623
+ header.b=emByReve;       spf=neutral (google.com: 209.85.220.41 is neither
+ permitted nor denied by best guess record for domain of ashish_p@iiitvadodara.ac.in)
+ smtp.mailfrom=ashish_p@iiitvadodara.ac.in
+Precedence: list
+Mailing-list: list students@iiitvadodara.ac.in; contact students+owners@iiitvadodara.ac.in
+List-ID: <students.iiitvadodara.ac.in>
+X-Spam-Checked-In-Group: students@iiitvadodara.ac.in
+X-Google-Group-Id: 474912623462
+List-Post: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/post>,
+ <mailto:students@iiitvadodara.ac.in>
+List-Help: <https://support.google.com/a/iiitvadodara.ac.in/bin/topic.py?topic=25838>,
+ <mailto:students+help@iiitvadodara.ac.in>
+List-Archive: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/>
+List-Unsubscribe: <mailto:googlegroups-manage+474912623462+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iiitvadodara.ac.in/group/students/subscribe>
+
+--0000000000000ad563059240197b
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Students
+
+One of our alumni *Mr. Saurabh Nitnaware (BTech 2014-18)* recently
+received  *Chief Minister Fellowship of Uttarakhand Government.*   This
+Fellowship Program will offer him to closely work with *Chief Minister
+Office (CMO) *and implement several state level flagship programs like
+*Utkarsh*(CM Real Time Monitoring System), *CM Helpline *Grievance
+Redressal Portal*,* *CM CSR Portal* for setting up crowd funding for micro
+enterprises, and several other schemes across thirteen districts of
+Uttarakhand.
+
+Also, the following has been accepted in international reputed conference
+*Title: Text Like Classification of Skeletal Sequences for Human Action
+Recognition*
+*Authors: Akansha Tyagi(M.Tech., 201761001), Ashish Patel (PhD,201771002),
+Pratik Shah*
+
+*Conference: The 5th Asian Conference on Pattern Recognition (ACPR
+2019)26-29 November 2019*
+*Location: Auckland, New Zealand*
+
+Akansha has recently joined IIT Mandi for PhD Program.
+
+Congratulations to all students.
+
+Regards,
+Dr. Ashish Phophalia
+Assistant Professor
+IIIT-V, Gandhinagar
+
+--0000000000000ad563059240197b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Students<div><br></div><div>One of our alumni <b>Mr. =
+Saurabh Nitnaware (BTech 2014-18)</b> recently received=C2=A0
+
+<b>Chief Minister Fellowship of Uttarakhand Government.</b>=C2=A0=C2=A0
+
+This Fellowship Program will offer him to closely work with=C2=A0<b>Chief M=
+inister Office (CMO)=C2=A0</b>and=C2=A0implement several state level flagsh=
+ip programs like=C2=A0<b>Utkarsh</b>(CM Real Time Monitoring System),=C2=A0=
+<b>CM Helpline=C2=A0</b>Grievance Redressal Portal<b>,</b>=C2=A0<b>CM CSR P=
+ortal</b>=C2=A0for setting up crowd funding for micro enterprises, and seve=
+ral other schemes across thirteen districts of Uttarakhand.=C2=A0=C2=A0=C2=
+=A0</div><div><br></div><div>Also, the following has been accepted in inter=
+national reputed conference</div><div><div><b>Title: Text Like Classificati=
+on of Skeletal Sequences for Human Action Recognition</b></div><div><b>Auth=
+ors: Akansha Tyagi(M.Tech., 201761001), Ashish Patel (PhD,201771002), Prati=
+k Shah<a class=3D"gmail-m_1438146929921766834gmail-m_1032746048743311769gma=
+il-m_4826419424049985307m_-1214251546024579700gmail-m_4994081189363501030gm=
+ail-Oux49"><span class=3D"gmail-m_1438146929921766834gmail-m_10327460487433=
+11769gmail-m_4826419424049985307m_-1214251546024579700gmail-m_4994081189363=
+501030gmail-UXkSbf"></span></a></b></div><div><b>Conference: The 5th Asian =
+Conference on Pattern Recognition (ACPR 2019)26-29 November 2019<br></b></d=
+iv><div><b>Location:=C2=A0<b>Auckland, New Zealand</b></b></div><div><b><b>=
+<br></b></b></div><div>Akansha has recently joined IIT Mandi for PhD Progra=
+m.</div><div><br></div><div>Congratulations to all students.</div><div><br>=
+</div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gma=
+il_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+Regards,<div>Dr. Ashish Phophalia</div><div>Assistant Professor</div><div>I=
+IIT-V, Gandhinagar</div></div></div></div></div></div></div></div></div></d=
+iv>
+
+--0000000000000ad563059240197b--

@@ -1,0 +1,185 @@
+Delivered-To: 201752009@iiitvadodara.ac.in
+Received: by 2002:ac0:8e5d:0:0:0:0:0 with SMTP id h29csp2093759imb;
+        Thu, 23 Apr 2020 07:19:58 -0700 (PDT)
+X-Received: by 2002:ac8:4c9d:: with SMTP id j29mr4439483qtv.297.1587651598693;
+        Thu, 23 Apr 2020 07:19:58 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1587651598; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=c6wdMwPiVcCjI3VScbaERDWLUh/0n4IxnuXsLuJuR+56PvJsXpk/GkrYwOx2+D6HZz
+         vy8g3/BFWy8zMwlSXrxZPdtnkS04j1cEqYKg/DJxGvQJKzbVq6sha54+Ncpcy2VOxAOu
+         hC3YQJJvRLxbdir0sHtV8csvUJex0XGqnVQY6FY+VRLDSLclbhdDOnCbMMhAuquYZ53F
+         SdwDXuXX9pmrPYfBBuhMy0pPPydV613gmLhU/5WXekBqCR6vt0ZC/QBxGz/6RjXWDHzk
+         gw6vtGma0YRUrA9oOhUMyzd+NvlYOWWMG45LbARgEQsVUKAQYSHBxHaYofstGoDm86a4
+         Vp7g==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=joP+3XejjgEjYHij9Oda0+7gdJkkzycNL/PSOJ43JNw=;
+        b=EL9nFP+A3ty8FC09zYFEq6t5wK5BExcXxmbvB20N3vgbflOYfh5IpTcTWNqND1xqGe
+         94iRIziDw3f51KCyfPAfA7yUIJpLoB6WOqVrdsIeV4v5Ry+IWLzVzyyMhthu/vl9oB3l
+         eLrB/JkBXNDEcmkqX+O7/FZVnqiGJFiwAZTZ5q+2YKCiBsBiaER3hKK5XfXz+h3HM+sn
+         YjX9S9/NYjZ931MDSmYmyIQmnu9fw8xKQX5qkAaWetZIqJPRNYxcRxP9RiWNVuyW9Gqw
+         sMaAsp9IMfw+bf+li662mz5hiHTcUG2Z0UhoN/qAUUkQEN6eTOxsRMVuIGmePtGfuRx1
+         k18w==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=uzC2fHNX;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbcv4vxozqqobbdoiq32qkgqehrz6laq@iiitvadodara.ac.in) smtp.mailfrom=ug2017+bncBCV4VXOZQQOBBDOIQ32QKGQEHRZ6LAQ@iiitvadodara.ac.in
+Return-Path: <ug2017+bncBCV4VXOZQQOBBDOIQ32QKGQEHRZ6LAQ@iiitvadodara.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id o16sor2404325qkj.161.2020.04.23.07.19.58
+        for <201752009@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Thu, 23 Apr 2020 07:19:58 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbcv4vxozqqobbdoiq32qkgqehrz6laq@iiitvadodara.ac.in) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=uzC2fHNX;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbcv4vxozqqobbdoiq32qkgqehrz6laq@iiitvadodara.ac.in) smtp.mailfrom=ug2017+bncBCV4VXOZQQOBBDOIQ32QKGQEHRZ6LAQ@iiitvadodara.ac.in
+ARC-Seal: i=2; a=rsa-sha256; t=1587651598; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=cvcNXBBrnEUQUo5AqTVppzqT/5uLpkkuhK5jXQz9Vz8KJBHOJBaGAmt/c30kHNR29R
+         pYoh5eBOXl8xgwdVQp2By7aKW4f2xObMO0KEeCAmwFbMxWnYOdmIZB8ICeoVprVCg7jy
+         KA60ZNZq1OueTVUk5uAgO8p9ZPmFbAMT0fXgiipkVZ4RV5Hzf8mrUfm7eFE1oJ2crZSD
+         kW8ZDRJgNDpHGO7PR7dQ0hQNe7kMpD2cymV7KJa5cCX9bAuyFr2oI/tZy1gSaGTtP/em
+         4MVmEt2Rgy3J1ui1xlbFvxo4R8Xg6L+TUrOLY+IpJBj5LjviuwiQnun+ZsCLCdVLMFED
+         Kx2g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=joP+3XejjgEjYHij9Oda0+7gdJkkzycNL/PSOJ43JNw=;
+        b=u9xTnYbBfYxeo2Q1hoov7tkDhtVvwYQOGfpRyFgBI8rlE0UwvWIKGXYpW6nowJTvus
+         O0/zRNq74zebIZ98wxSUGUQmnt80mkJCvzb1o/jalsfbfcMRTzofYt44880oCjLjg+Zb
+         dScRnGcAD1Eoauq4EqvLjjYhG5QQbJtNs22N4sIYCCfr2veisMpo+v2yTNvhAwOQ/DKz
+         lZsZVajDb3zJsPc2KYadWZ1Fif15KHBcbaarmpRXijtDWzK1NSudD9pfmpyU1NotZU/p
+         9BgvN470Jdkiztn+9ILhVy6ND8vyTGlrJAvw6FYhNpHVDLuWC2nHa/Q1cZBYMZiz7Qos
+         PfHg==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b="unzJ/2zl";
+       spf=neutral (google.com: 209.85.220.65 is neither permitted nor denied by best guess record for domain of spc@iiitvadodara.ac.in) smtp.mailfrom=spc@iiitvadodara.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiitvadodara-ac-in.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=joP+3XejjgEjYHij9Oda0+7gdJkkzycNL/PSOJ43JNw=;
+        b=uzC2fHNX/dhJ0NXVLdEYYREWkx4c5/FM/vUMJf5zHN0+ifbctMq06PyOUF2/XcLsN3
+         H72LAZ+EKyXPc6Q5cnHn8ni8YzcBb4xjD3i7gql5JFeakq0jCvn0qtSgtdEKcypfbH/9
+         GyO2no/au35ejqIDny0fBn/Mo29HuaJH/9xX0NP+9ZI38SMW2InveTYwQlLf/H0a7xCP
+         ISZLjjnaJNwhO26JLYRhMho1LM4hwYXpUqvT8gdPMD4M6ZdcGg6gkIieEwwV0xDVfpTV
+         y8EF6Rar7HXusLvrKsnzZRdFi7OM4/peIE/b6ccPlHU1E2LySf0MbKS1MIllohkx8vhs
+         T51w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=joP+3XejjgEjYHij9Oda0+7gdJkkzycNL/PSOJ43JNw=;
+        b=soLH6XTxDVT8TGMfdyZzRchyVVJ/ZhWFDKcr+AM6LqV/KcAvBvdjXOaWGLVaWO0v22
+         CSVFWBjp+6WZXo47cF65ZC20b/APz3v3zyW0dW/QFWcOFI2OJurTSNkesSlKAPtEjOSE
+         mxXcwxNqIBjiSmMC/BLgSYZkYFLTb0xXjekHytAyLRdfqRHJQBbAtA+BpPk8POG/ovht
+         HC/tK6knrLGGMqPhYNxKGpLJ6VIqOPt5mAiELMFgp98tir//Q8eWUiMsOJRzpOdgOb+N
+         c38nw3634JLv4ebH7lQC7JT1Dej3/s736n7K5PKnqRjayCR0WLfkwWdk36PtyIKlxwh1
+         HcfQ==
+X-Gm-Message-State: AGi0Pua46yl1QTW5Xg6PlKiZ75PqP9I0GbHmh8BDmjXp+KSTCIaMBCeW
+	91VnbhP+rcqC0MDAsjgZSv9suWXt
+X-Google-Smtp-Source: APiQypIc05VfSjlw1v4qzWplZCpxHCG+bc6bCkimZD7unCGVX6zXjCwcVFzzbts569MU2X07hMfbrg==
+X-Received: by 2002:a37:614a:: with SMTP id v71mr4007586qkb.326.1587651597188;
+        Thu, 23 Apr 2020 07:19:57 -0700 (PDT)
+X-BeenThere: ug2017@iiitvadodara.ac.in
+Received: by 2002:a37:586:: with SMTP id 128ls3712471qkf.5.gmail; Thu, 23 Apr
+ 2020 07:19:56 -0700 (PDT)
+X-Received: by 2002:a05:620a:16db:: with SMTP id a27mr3728054qkn.116.1587651596526;
+        Thu, 23 Apr 2020 07:19:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1587651596; cv=none;
+        d=google.com; s=arc-20160816;
+        b=i2gN418ExZsVAG0QRpaBz1ttBOMMm4wqiIZfh3EWNItln0Q+o5QDSrIGlR78evfWCn
+         1/iqDYRFsjnn33uWA8S7yOe63h/3ooJHc549gvf1OzXq4yUz07Rf3LjY5eyZZSuZGpSg
+         h5WHQxBFYDsmlK/04iRl4ZTuapZkkXth5zKFAq9OxGYpJ8YB9kMWV4dpKOe3tweSfto2
+         RLIemz7UR0t9CRIsYaZsJpabm8Au6C/Kl3VXS36vrfA14Iel1Ako7dKZ9aefhUB2YIbc
+         DKNV458sGVLsgriW4AWI450BAe6CqXrWpNTfDnc0pn9wCh7cooKxZBzTm28NMxovtTl8
+         hBGQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=joP+3XejjgEjYHij9Oda0+7gdJkkzycNL/PSOJ43JNw=;
+        b=MCTq5LeogUT00QqmkQTc1WmZq8GHGMLTjRGkgp+3WtzkowkNX7AFBuZ2xe3JVavCtm
+         YLcGDkZNB+eUQOA19FLk5IVlWMpXVklT8ZIUdBYitQNioCYgio7BSU3bvEfwucryYzm9
+         aSezI426wNLdLnEuHt+/qN0Z7UFtAJCyTpsjwKRE1ywhotr6J6O68IWHREr973lKe8j0
+         lHc50rl+3jGmG2d8FcdmCSKhgekMNT8pK8fnRZeoO34cj2y0oKej2ilGEBD3br2sQA2m
+         PmDwMl/kdHhuo1TNCR6KpEHPX8mEU/UoRmkw6kEJPkf/J9UzOitXCOJbn5WC+3TOP2YB
+         lrZA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b="unzJ/2zl";
+       spf=neutral (google.com: 209.85.220.65 is neither permitted nor denied by best guess record for domain of spc@iiitvadodara.ac.in) smtp.mailfrom=spc@iiitvadodara.ac.in
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id l64sor2440577qkf.42.2020.04.23.07.19.56
+        for <ug2017@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Thu, 23 Apr 2020 07:19:56 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.65 is neither permitted nor denied by best guess record for domain of spc@iiitvadodara.ac.in) client-ip=209.85.220.65;
+X-Received: by 2002:ac8:27f9:: with SMTP id x54mr4203723qtx.45.1587651595818;
+ Thu, 23 Apr 2020 07:19:55 -0700 (PDT)
+MIME-Version: 1.0
+From: SPC IIIT Vadodara <spc@iiitvadodara.ac.in>
+Date: Thu, 23 Apr 2020 19:49:42 +0530
+Message-ID: <CANEEodO=xkHSZqUVkHEMnDXSjVMxudNFoURZqR-9N6h9Xc10ug@mail.gmail.com>
+Subject: Mathworks Internship Drive 2 | 2017-21
+To: UG2017 <ug2017@iiitvadodara.ac.in>
+Content-Type: multipart/alternative; boundary="00000000000065709c05a3f5f18a"
+X-Original-Sender: spc@iiitvadodara.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623
+ header.b="unzJ/2zl";       spf=neutral (google.com: 209.85.220.65 is neither
+ permitted nor denied by best guess record for domain of spc@iiitvadodara.ac.in)
+ smtp.mailfrom=spc@iiitvadodara.ac.in
+Precedence: list
+Mailing-list: list ug2017@iiitvadodara.ac.in; contact ug2017+owners@iiitvadodara.ac.in
+List-ID: <ug2017.iiitvadodara.ac.in>
+X-Spam-Checked-In-Group: ug2017@iiitvadodara.ac.in
+X-Google-Group-Id: 131901427600
+List-Post: <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/post>, <mailto:ug2017@iiitvadodara.ac.in>
+List-Help: <https://support.google.com/a/iiitvadodara.ac.in/bin/topic.py?topic=25838>,
+ <mailto:ug2017+help@iiitvadodara.ac.in>
+List-Archive: <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/>
+List-Unsubscribe: <mailto:googlegroups-manage+131901427600+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/subscribe>
+
+--00000000000065709c05a3f5f18a
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Students,
+
+Mathworks is hiring interns for  vacant positions.  Please fill the form if
+you are interested.
+Note:- Don't fill out if you have already got an internship on campus.
+
+*CPI criteria: 6.5 and above*
+
+*Link: *https://forms.gle/3sFoZXGHVPwBMuUK9
+Deadline: 24/04/2020 9:30 A.M.
+
+-- 
+Regards,
+
+Students Placement Cell,
+IIIT Vadodara
+
+--00000000000065709c05a3f5f18a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Students,<div><br></div><div>Mathworks is hiring inte=
+rns for=C2=A0 vacant positions.=C2=A0 Please fill the form if you are inter=
+ested.</div><div>Note:- Don&#39;t fill out if you have already got an inter=
+nship on campus.</div><div><br></div><div><b>CPI criteria: 6.5 and above</b=
+></div><div><br></div><div><b>Link:=C2=A0</b><a href=3D"https://forms.gle/3=
+sFoZXGHVPwBMuUK9">https://forms.gle/3sFoZXGHVPwBMuUK9</a></div><div><font c=
+olor=3D"#ff0000">Deadline: 24/04/2020 9:30 A.M.</font><br clear=3D"all"><di=
+v><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmai=
+l=3D"gmail_signature"><div dir=3D"ltr">Regards,<div><br></div><div>Students=
+ Placement Cell,</div><div>IIIT Vadodara</div></div></div></div></div>
+
+--00000000000065709c05a3f5f18a--
