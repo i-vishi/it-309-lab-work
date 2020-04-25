@@ -1,0 +1,458 @@
+Delivered-To: 201752009@iiitvadodara.ac.in
+Received: by 2002:ac0:8e5d:0:0:0:0:0 with SMTP id h29csp1629410imb;
+        Wed, 22 Apr 2020 21:42:52 -0700 (PDT)
+X-Received: by 2002:a19:f719:: with SMTP id z25mr1205085lfe.63.1587616972026;
+        Wed, 22 Apr 2020 21:42:52 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1587616972; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=PJAAvJSN9/7SpDIRSiZXClKadPzChNVb8/frRUNQaPNzZJ/uoyZN7U+rwCPIzZWA9f
+         +oeAkwvT5a6JLs36J1RO5VHnGziecHL74epNW2419gN6tNeLPzT3nBBafbSmVGfNDtGd
+         PbW935nlnVOXpkmy/otzG0zts02VMXqG+r+W3eg9NhKbfrRfBzxti6URZk/gufQu1LVW
+         juVRGR8iJIzgX7piBCRYSS97KUSvRNquO/1RbsZV9N1ays6nfIRR3viYZ23tuy7Vs7s2
+         9oAu2LYD2CqeiIx2oppezzUHq3dACQmD2gbWTDIOIPlpvd04eCVuo3FFpi6AU+9Dgdj9
+         Av1g==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=DBLwLPozFh3aprFlctgCdPo5b4dDhUvrVvg48bP9vgE=;
+        b=CiA+/cQa5CPm+By8aVld8FEK8OJJLeYOMJpUA9MLN3RbOlkC/kMQFtUFhVGHB8np4x
+         vWa880kIT6BilTl2jFNC/FqLysZRfEViDhjO7Pqc3TdsyWEWubI73kb3RdaAfC3jCipM
+         KUmN9LbuhI33iADafNfbxHtpQDnJW2r0eV9qy8A0kl47FVF/vS6YJATPLqNLhCEQ497t
+         e9zxBDcr+Jbv0tedFl8Q9+9jqPnpLnku8uhFveXq2ZD9XWDPqvZ+kEv35GEaumTNaqOA
+         hVih9HIomxZSF1RX1vg6uduTXJ0IqRArTmEzrdSWHtn4Xewk5zOwRvHSmPzGkPqoy/3F
+         K2Og==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b="vd/Gungv";
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbd34tsvh5afrbsvzqt2qkgqez3x5vuq@iiitvadodara.ac.in) smtp.mailfrom=students+bncBD34TSVH5AFRBSVZQT2QKGQEZ3X5VUQ@iiitvadodara.ac.in
+Return-Path: <students+bncBD34TSVH5AFRBSVZQT2QKGQEZ3X5VUQ@iiitvadodara.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id p11sor837818lji.42.2020.04.22.21.42.51
+        for <201752009@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Wed, 22 Apr 2020 21:42:52 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbd34tsvh5afrbsvzqt2qkgqez3x5vuq@iiitvadodara.ac.in) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b="vd/Gungv";
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbd34tsvh5afrbsvzqt2qkgqez3x5vuq@iiitvadodara.ac.in) smtp.mailfrom=students+bncBD34TSVH5AFRBSVZQT2QKGQEZ3X5VUQ@iiitvadodara.ac.in
+ARC-Seal: i=2; a=rsa-sha256; t=1587616971; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=ntAITAYCIsXMab48dp/JFy665yV2wdtiTjILZwR2AFMSDU5HSOs8Q02IFxjmKp1t47
+         /MMvyd22AhzgVfZeDpoozBam4EJIMwQp8OGQvCfI54OksDMY50XuKFT3wHiCcnW3eB93
+         xzPpg3VmrCTxeAZE1rx2MXK/pIJEP1eT2MLmsr22SUnyJJ0ZcBJ7v2SQ29aJ6PT+Bkfu
+         Cjkv7xEST0qtucADHlGIC49hiv+vq7rdPKvNPI0okbsVD8ix+73VAZLzyiexhwq6GLef
+         R5/xuPnPQH1Cop2fRrzP+IpRoyK5QN3lNADVkZUZUpHMvEgQdwKBUArd1ie+jzvZrKz4
+         wMOg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=DBLwLPozFh3aprFlctgCdPo5b4dDhUvrVvg48bP9vgE=;
+        b=wNIJIq0yHOYkMoNzV5Hh8+JqZTBxlsA9XIMXa5AQfDD0SXDy2lOdS6Xt5KUxnptPGM
+         SJA3D2B2SL7sR29NP2s6McLk/WrY6+An3m4xOzohMtZIdOJIi/N9JdXKaGWbTrlhO81p
+         vyL1pMC90IBjZssIfVdHX3zlZW0dpOc+qtZyba7oFc0nyqWOZYsZW+5mDlp/sQUcuxh6
+         R6F8FXhoFUC7kisF8RwP+C1QSLwgRNlMvcA4LrDSgPrf5Fj2wyLXVGQISrHxaKXZ0qaY
+         +CUfnnCqPuNJopbfbiK1WGEdspidvhA1fjWdyDsbdRHJMVA6CElFpP2tRwj4BlzsJywj
+         zt3A==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=H1OAjWK4;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar_office@iiitvadodara.ac.in) smtp.mailfrom=registrar_office@iiitvadodara.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiitvadodara-ac-in.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=DBLwLPozFh3aprFlctgCdPo5b4dDhUvrVvg48bP9vgE=;
+        b=vd/GungvxKlF6UVzIspyE7kb1LAU+uu/FMgAA4kMEdhOn2vZwrGSGZnJYNDJXMGd4I
+         0Cwl6DO0eDKAs5JdL5GTIq9NHAvAi2/3HauDewf1DwIvDrqENKum8Um2vEIxzj41zfJU
+         1hVIQ2GYLSxCzIJJzXRk36+gmi8oWZD0oi0z1VHJZPwjKi/FEKsbdsnXHOpZA9FKwR13
+         Px5fYRWCXtRiz4j9HSXvUeQ7LvjmRSu+teN0kGOjtopK70Oc5K+wVgV0EGkT+hofPQhm
+         5YVdV02mVSGnVmUSd+jHyMYKMF2SqZec8H4eU2n96PbzXrJt8JjOk2S3XT5gIXDgYCzh
+         7kHQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=DBLwLPozFh3aprFlctgCdPo5b4dDhUvrVvg48bP9vgE=;
+        b=Mp4wJO8MPa/nXTJyxxMQi+1DnlaYu3K5St8GBrZafnZ976RwNCOs1onRxOnhj06CuU
+         k4RKqmA6hqsQ2iOX+t5vNDY/r8RTqLKJr1pJ0Sqv9AQwJYt9zr8bRDIE+9/xKyKXekfQ
+         Mj6EvP9ZIx8DdNSCa3Pp/cvbIQypyLhVrx5F6klFY6MVUGH/8I4DZl9UHaawmwdJTMRD
+         2mHmtW9cF8o1Ga8aZ2tW4bFJUjyAsMtYjwgSUqSVsUYkeiS0YudqCelUlr3iGQIhT9fX
+         J3Zs+SuuCkoTEg2B8bnG6GSqBLdkXnetn3X8ZToRWfAb9Fm80wiZR7gteKI04Vpe65LI
+         Y7AQ==
+X-Gm-Message-State: AGi0PuYQRvCuVeeoCLclUY6WfxgF/BnOwHCj57037mAZPNGvG4jkPE4x
+	9+LBhZBvIHDW49T0D0eKTXsraSUZ
+X-Google-Smtp-Source: APiQypJ6Rw3hM4SFLLF9xq+UqBXKls3jAJbi+4EQnOOV3gKPt0MH3wBzj4FzKe7RcPu+uCMWnHsv2A==
+X-Received: by 2002:a2e:85d1:: with SMTP id h17mr1261792ljj.70.1587616970986;
+        Wed, 22 Apr 2020 21:42:50 -0700 (PDT)
+X-BeenThere: students@iiitvadodara.ac.in
+Received: by 2002:a2e:86cf:: with SMTP id n15ls1270714ljj.11.gmail; Wed, 22
+ Apr 2020 21:42:49 -0700 (PDT)
+X-Received: by 2002:a2e:95d4:: with SMTP id y20mr1207071ljh.246.1587616969786;
+        Wed, 22 Apr 2020 21:42:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1587616969; cv=none;
+        d=google.com; s=arc-20160816;
+        b=J/qlsQq9B7GGhUClgo+CJqHzPd+lbb1prJnfU2Me9Q2sFQoodCnCe08r0WYcRoVmX8
+         AZPdt9q3LjO4xj8uRmI4i5zydM4FZtNu7kIVi0XjgfTiUJHx0uommxsHosYn//zzGCb3
+         rYp1nkKwsy3c3grQu4D3qDrv8nXF+H4BHWS3tCKfK4z1jYb/J4BbB2BFOgdnkr3C1M7w
+         5InE0V16Kg5MjSAjCpEJkmvIxD3AoPfweoHSoqcxfQnOBAAj35/GB9kadHuIfA9eMZdU
+         qATS4Veq8RVS+tbvHVW+o3z80tCNBriJYpThno+s2uk+ZVBmXnTKZG9o//hQ5qEQ4EZn
+         +Ulg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=DBLwLPozFh3aprFlctgCdPo5b4dDhUvrVvg48bP9vgE=;
+        b=e1Q6tzmOyrfg+QWKIuAul5Dk8mwZ4/I1rTvYN4eH6Jk6H0DUGUACdds5o51GiiBV34
+         1554o7NbZDuQnNM18xXSGiC8p8/prDYRdYabUIcE5+i7Y6bmw4YCpFgWgkvuGXjCc0Ko
+         EdFrGORHlmMRP1GBV3RNtN6XoIcM4Ek6+r9dZ9KtelhxymnNMVvZbfsmY1k7pzfmsXWG
+         KU7xQfRh8k3mm97en4IScjHUVkeoWLifC56SIds4x2l2bHnlopn6PRjxHOpPA/bwRrqn
+         z18OdCgJdNk1LYsKU1HPHP6AcD1Rj1S9xnlIoS3Rxg40zIs7K9D1n/TsCSbvrxnvbCvg
+         CpEA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=H1OAjWK4;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar_office@iiitvadodara.ac.in) smtp.mailfrom=registrar_office@iiitvadodara.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id c20sor525972lfh.10.2020.04.22.21.42.49
+        for <students@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Wed, 22 Apr 2020 21:42:49 -0700 (PDT)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar_office@iiitvadodara.ac.in) client-ip=209.85.220.41;
+X-Received: by 2002:a05:6512:405:: with SMTP id u5mr1149473lfk.192.1587616968980;
+ Wed, 22 Apr 2020 21:42:48 -0700 (PDT)
+MIME-Version: 1.0
+From: Office of the Registrar IIIT Vadodara <registrar_office@iiitvadodara.ac.in>
+Date: Thu, 23 Apr 2020 10:12:38 +0530
+Message-ID: <CAB8XsmawAQM_R07Oyvibz9tN1DQ8NffQec-Q0rfWoz8JB-FyEQ@mail.gmail.com>
+Subject: Office Order: Mental Health Well Being Committee | OO:
+ IIITV/2019-20/66  dated 23.04.2020
+To: All Students of IIIT Vadodara <students@iiitvadodara.ac.in>, Staff <staff@iiitvadodara.ac.in>, 
+	faculty <faculty@iiitvadodara.ac.in>, visitingfaculty@iiitvadodara.ac.in, 
+	IIITV Counselor <counselor@iiitvadodara.ac.in>
+Cc: Director IIITV <director@iiitvadodara.ac.in>
+Content-Type: multipart/alternative; boundary="00000000000079ce4105a3ede189"
+X-Original-Sender: registrar_office@iiitvadodara.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623
+ header.b=H1OAjWK4;       spf=neutral (google.com: 209.85.220.41 is neither
+ permitted nor denied by best guess record for domain of registrar_office@iiitvadodara.ac.in)
+ smtp.mailfrom=registrar_office@iiitvadodara.ac.in
+Precedence: list
+Mailing-list: list students@iiitvadodara.ac.in; contact students+owners@iiitvadodara.ac.in
+List-ID: <students.iiitvadodara.ac.in>
+X-Spam-Checked-In-Group: students@iiitvadodara.ac.in
+X-Google-Group-Id: 474912623462
+List-Post: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/post>,
+ <mailto:students@iiitvadodara.ac.in>
+List-Help: <https://support.google.com/a/iiitvadodara.ac.in/bin/topic.py?topic=25838>,
+ <mailto:students+help@iiitvadodara.ac.in>
+List-Archive: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/>
+List-Unsubscribe: <mailto:googlegroups-manage+474912623462+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iiitvadodara.ac.in/group/students/subscribe>
+
+--00000000000079ce4105a3ede189
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Office of Registrar*
+
+
+OO:
+IIITV/2019-20/66
+23.04.2020
+
+
+
+*Office Order: Mental Health Well Being Committee*
+
+
+
+MHRD has directed the Institute to form a =E2=80=9C*Mental Health Well Bein=
+g
+Committee*=E2=80=9D. Following have been nominated as part of the Committee=
+.
+
+Dr Ajay Nath *(PIC Students Affairs)*
+
+*Chairperson*
+
+Dr Jignesh Bhatt *(PIC PG Courses)*
+
+*Member*
+
+*All Faculty Advisors (B.Tech)*
+
+
+
+2016-17 Batch =E2=80=93 Dr Swapnil Lokhande
+
+
+
+2017-18 Batch =E2=80=93 Dr Naveen Kumar
+
+
+
+2018-19 =E2=80=93 A Batch =E2=80=93 Dr Kamal K Jha
+
+2018-19 =E2=80=93 B Batch =E2=80=93 Dr Bhupinder Kumar
+
+
+
+2019-20 =E2=80=93 A Batch =E2=80=93 Dr Ajay Nath
+
+2018-19 =E2=80=93 B Batch =E2=80=93 Dr Antriksh Goswami
+
+
+
+*Member*
+
+Dr Nitu Singh Bhaduria (*Institute Counselor*)
+
+*Member*
+
+
+
+This has the approval of the Director
+
+
+
+                              Sd/-XXX
+
+*
+
+                               Registrar*
+
+*Distribution*:-
+
+Director =E2=80=93 for information please
+
+All faculty =E2=80=93 By email
+
+Institute Counselor =E2=80=93 By email
+
+Staff =E2=80=93 By email
+
+All students =E2=80=93 By email
+
+Office Copy
+
+--00000000000079ce4105a3ede189
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p class=3D"MsoNormal" align=3D"center" style=3D"margin:0c=
+m 0cm 0.0001pt;text-align:center;line-height:107%;font-size:11pt;font-famil=
+y:Calibri,sans-serif"><b><u><span style=3D"font-size:14pt;line-height:107%"=
+>Office of
+Registrar</span></u></b></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;te=
+xt-align:center;line-height:107%;font-size:11pt;font-family:Calibri,sans-se=
+rif"><br></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">OO: IIITV/2019-20/66=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=
+=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=20
+23.04.2020</span></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;te=
+xt-align:center;line-height:107%;font-size:11pt;font-family:Calibri,sans-se=
+rif"><b><u><span style=3D"font-size:12pt;line-height:107%"><span style=3D"t=
+ext-decoration-line:none">=C2=A0</span></span></u></b></p>
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin:0cm 0cm 0.0001pt;te=
+xt-align:center;line-height:107%;font-size:11pt;font-family:Calibri,sans-se=
+rif"><b><u><span style=3D"font-size:12pt;line-height:107%">Office
+Order: Mental Health Well Being Committee</span></u></b></p>
+
+<p class=3D"gmail-Standard" style=3D"line-height:150%;margin:0cm 0cm 0.0001=
+pt;font-size:12pt;font-family:&quot;Liberation Serif&quot;,serif"><span sty=
+le=3D"font-size:11pt;line-height:150%;font-family:&quot;Calibri Light&quot;=
+,sans-serif">=C2=A0</span></p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif">MHRD has directed the Institute to =
+form a =E2=80=9C<b>Mental Health Well
+Being Committee</b>=E2=80=9D. Following have been nominated as part of the =
+Committee.</p>
+
+<table class=3D"gmail-MsoTableGrid" border=3D"1" cellspacing=3D"0" cellpadd=
+ing=3D"0" style=3D"border-collapse:collapse;border:none">
+ <tbody><tr>
+  <td width=3D"378" valign=3D"top" style=3D"width:283.25pt;border:1pt solid=
+ windowtext;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">Dr Ajay Nath <b>(PIC Stude=
+nts Affairs)</b></p>
+  </td>
+  <td width=3D"246" valign=3D"top" style=3D"width:184.25pt;border-top:1pt s=
+olid windowtext;border-right:1pt solid windowtext;border-bottom:1pt solid w=
+indowtext;border-left:none;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><b>Chairperson</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=3D"378" valign=3D"top" style=3D"width:283.25pt;border-right:1pt=
+ solid windowtext;border-bottom:1pt solid windowtext;border-left:1pt solid =
+windowtext;border-top:none;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">Dr Jignesh Bhatt <b>(PIC P=
+G Courses)</b></p>
+  </td>
+  <td width=3D"246" valign=3D"top" style=3D"width:184.25pt;border-top:none;=
+border-left:none;border-bottom:1pt solid windowtext;border-right:1pt solid =
+windowtext;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><b>Member</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=3D"378" valign=3D"top" style=3D"width:283.25pt;border-right:1pt=
+ solid windowtext;border-bottom:1pt solid windowtext;border-left:1pt solid =
+windowtext;border-top:none;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><b>All Faculty Advisors (B=
+.Tech)</b></p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">2016-17 Batch =E2=80=93 Dr=
+ Swapnil Lokhande</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">2017-18 Batch =E2=80=93 Dr=
+ Naveen Kumar</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">2018-19 =E2=80=93 A Batch =
+=E2=80=93 Dr Kamal K Jha</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"color:white=
+">2018-19 =E2=80=93 </span>B
+  Batch =E2=80=93 Dr Bhupinder Kumar</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">2019-20 =E2=80=93 A Batch =
+=E2=80=93 Dr Ajay Nath</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><span style=3D"color:white=
+">2018-19 =E2=80=93 </span>B
+  Batch =E2=80=93 Dr Antriksh Goswami</p>
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+  </td>
+  <td width=3D"246" valign=3D"top" style=3D"width:184.25pt;border-top:none;=
+border-left:none;border-bottom:1pt solid windowtext;border-right:1pt solid =
+windowtext;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><b>Member</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=3D"378" valign=3D"top" style=3D"width:283.25pt;border-right:1pt=
+ solid windowtext;border-bottom:1pt solid windowtext;border-left:1pt solid =
+windowtext;border-top:none;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif">Dr Nitu Singh Bhaduria (<b=
+>Institute Counselor</b>)</p>
+  </td>
+  <td width=3D"246" valign=3D"top" style=3D"width:184.25pt;border-top:none;=
+border-left:none;border-bottom:1pt solid windowtext;border-right:1pt solid =
+windowtext;padding:0cm 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin:0cm 0cm 0.0001pt;line-height:norma=
+l;font-size:11pt;font-family:Calibri,sans-serif"><b>Member</b></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif">=C2=A0</p>
+
+<p class=3D"MsoNormal" style=3D"margin:0cm 0cm 8pt;line-height:107%;font-si=
+ze:11pt;font-family:Calibri,sans-serif">This has the approval of the Direct=
+or</p><p class=3D"MsoNormal" style=3D"text-align:start;margin:0cm 0cm 8pt;l=
+ine-height:107%;font-size:11pt"><span style=3D"font-size:12pt;text-align:ri=
+ght"><span style=3D"font-size:11pt"><font face=3D"Calibri, sans-serif">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0</font></span><span styl=
+e=3D"font-family:&quot;Calibri Light&quot;,sans-serif;font-weight:bold;font=
+-size:11pt">Sd/-XXX</span></span></p><p class=3D"MsoNormal" style=3D"text-a=
+lign:start;margin:0cm 0cm 8pt;line-height:107%;font-size:11pt"><b style=3D"=
+font-family:&quot;Liberation Serif&quot;,serif;font-size:12pt;text-align:ri=
+ght"><span style=3D"font-size:11pt;font-family:&quot;Calibri Light&quot;,sa=
+ns-serif">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Registrar</span>=
+</b></p>
+
+<p class=3D"gmail-Standard" style=3D"line-height:150%;margin:0cm 0cm 0.0001=
+pt;font-size:12pt;font-family:&quot;Liberation Serif&quot;,serif"><b><u><sp=
+an style=3D"font-size:11pt;line-height:150%;font-family:&quot;Calibri Light=
+&quot;,sans-serif">Distribution</span></u></b><span style=3D"font-size:11pt=
+;line-height:150%;font-family:&quot;Calibri Light&quot;,sans-serif">:-</spa=
+n></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">Director =E2=80=93 fo=
+r
+information please</span></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">All faculty =E2=80=93=
+ By email</span></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">Institute Counselor =
+=E2=80=93
+By email</span></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">Staff =E2=80=93 By em=
+ail</span></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">All students =E2=80=
+=93 By
+email</span></p>
+
+<p class=3D"gmail-Standard" style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt=
+;font-family:&quot;Liberation Serif&quot;,serif"><span style=3D"font-size:1=
+1pt;font-family:&quot;Calibri Light&quot;,sans-serif">Office Copy</span></p=
+></div>
+
+--00000000000079ce4105a3ede189--

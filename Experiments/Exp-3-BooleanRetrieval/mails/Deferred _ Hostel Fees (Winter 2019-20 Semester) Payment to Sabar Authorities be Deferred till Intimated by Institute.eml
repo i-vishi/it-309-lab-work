@@ -1,0 +1,201 @@
+Delivered-To: 201752009@iiitvadodara.ac.in
+Received: by 2002:ad5:4282:0:0:0:0:0 with SMTP id z2csp4552175imn;
+        Fri, 20 Dec 2019 23:23:18 -0800 (PST)
+X-Received: by 2002:a05:6830:4d9:: with SMTP id s25mr19565016otd.171.1576912998594;
+        Fri, 20 Dec 2019 23:23:18 -0800 (PST)
+ARC-Seal: i=3; a=rsa-sha256; t=1576912998; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=xRa72r2bwrZNJWEftGQECz1C3CyllCZd4XGXFly7Yqn/YwckQsTEiC9Q4D94F6Ch7a
+         re/Ggibb3ZKV1Rl2LibMW1YVa2XLqx/Jgdk5FDwqwtTcV0GerMYUfkKBzh/P4dLZ/CMN
+         lq8Ys2I0jdaD2onWF12cgvudXpGyt8OyLR6jYzg1DNvbTDBMPcf7ZYdUqeVmdKiorNYF
+         kjWx4OxCl1F9yfQoeb8GHWNBXR9JKbbBJKth+jU51eBEGYMN8CMaqVWFsXL+7c7+zy8x
+         cHm9Qm2jiAUl9mUWCBFIj6JRMc/TiWyskLNWZ6QuKv5dEglJrARyqcTHGAea0JMOOCLY
+         zFfg==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=iV7s2TVPZs39oHAwyT/ohW4dbo1er5wtsVr91ofDrHY=;
+        b=LY2w5PMonMX+A0K8EZ737CHjSvfJlN1rSttE0N9WOPf4pZyxgihvgLHYzrAIPcGEO7
+         A/MPAxZOmPegdgJpsU20S6zpgQslzLHnOx5suxJJSvj0Dip4kM8fIeYgcyHjFYPGlael
+         oY0WIW3oqBarLZFas5QiOtoDiwGf2x7aCRx038Sm4CoFVuXooi6szrON4aYayyNx49hj
+         +6XIcj9OCM6S9rasV11A+YzH09vifKdpc1bK8ayW2A4D1M46Qbbzkyt04ovavIAYv2+B
+         UngkgeMzs93Z+ZCxBlgSwSOoo/LHEjKgdxb8Tx+RSSDCrsCQWjuH9bs6TgGWeaYNa8ui
+         dgXQ==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=CEjr79xg;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbcij3c4i6qbrbzmq67xqkgqekklx5vy@iiitvadodara.ac.in) smtp.mailfrom=students+bncBCIJ3C4I6QBRBZMQ67XQKGQEKKLX5VY@iiitvadodara.ac.in
+Return-Path: <students+bncBCIJ3C4I6QBRBZMQ67XQKGQEKKLX5VY@iiitvadodara.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id t12sor8939408ioc.112.2019.12.20.23.23.18
+        for <201752009@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Fri, 20 Dec 2019 23:23:18 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbcij3c4i6qbrbzmq67xqkgqekklx5vy@iiitvadodara.ac.in) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=CEjr79xg;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of students+bncbcij3c4i6qbrbzmq67xqkgqekklx5vy@iiitvadodara.ac.in) smtp.mailfrom=students+bncBCIJ3C4I6QBRBZMQ67XQKGQEKKLX5VY@iiitvadodara.ac.in
+ARC-Seal: i=2; a=rsa-sha256; t=1576912998; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=wCrvGQ8R1olL1OvXGX6nCCQzlLZ/opczKdGqNvDx4XCADpFTZmIvYdXJJhuV+P3ryK
+         BumH+7m0H4giPxJD2P/yEna002kc5JpshBB1d61iJvb2cO8HIsc70QyZlgcPeKCXOVhc
+         LgFJZQ77VN5x8wnv4rE5oD90TYXgaQK9lLrs8qq5oFty10wGIXc9T3Vwn/2gteUWYHhU
+         Ti+KLc0CwO88GLXGpNtIyP0SxVNeHcEU/PuJJGOxkYUhUDlryq2rNVacqKtjJtgARck3
+         T65yJFV1lBCbWgy7DJZSfK69uvApjsyl20H6Es4SrmI6hOV9elF7AIKaj4cnD0qYPkhD
+         NxFg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :mime-version:dkim-signature;
+        bh=iV7s2TVPZs39oHAwyT/ohW4dbo1er5wtsVr91ofDrHY=;
+        b=Gad5aYirb+OgvUoP7U6Xlca6XHJCrAI2CTp8QQs0s+kqqKWxVM6TvTLVzxKk6AmvXg
+         ae5GC4hJvD1QAiwwsw3ak8UU5jWd+ABbLlkIjdTJEPieBzyI0Swb1OBOf8hVMl7uX5Qn
+         SW9V2QCxzdjplSfrXic49u1omgDF87r9D7K1EsG+u5Fj5k4TjPFmYXvASbv7BWO5fDpR
+         QDUPHnXpzhlTwJAi6kB+QteY7E9XJDgovd+w2kMS0Hgoi8CSP+58PSzW96wlUT6RQlo8
+         yQorkIqko7NsypfjOIp0t32TVBu9Xn2qQpLNFoIYqzK7TmTErcAkfCDD4UVls6VTpwRP
+         VwaA==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=X50+MxDw;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar@iiitvadodara.ac.in) smtp.mailfrom=registrar@iiitvadodara.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiitvadodara-ac-in.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :list-post:list-help:list-archive:list-unsubscribe;
+        bh=iV7s2TVPZs39oHAwyT/ohW4dbo1er5wtsVr91ofDrHY=;
+        b=CEjr79xg71dcnkwjgkZt9S4sMnjSQieH41JDoneAbcPfhHXUsSgMKlAqXTvrTMSH0Q
+         lxSypNko7rd8GDrPMQ0eNQttBi1ADiBKBGqI1bWdhWi+Deraci5Dpsi1XptSgkuvxTCq
+         qeFrVhri9wIKIaTEH7Jz5qUEeSbhlA7zRQXhtEZr8D2+u1VSCrKWCntBZoV/YATZ461C
+         pdkriZFsKx2RiUNBPMyxi+r89pOuvYS9kXBqyOPMKWHKuJ3c/YaAKznOBTbZGSp6skfZ
+         sl8VvFSFwbRmWHncT4zH8AJvnEUnZaxozgngKwWAVllXm/muwizfUCrfGP9Ewv/Cpe7X
+         aOmQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help
+         :list-archive:list-unsubscribe;
+        bh=iV7s2TVPZs39oHAwyT/ohW4dbo1er5wtsVr91ofDrHY=;
+        b=pEf/MumzwClnYTTC2Fl/jk+9j6VL3luIdX+5EKKf45BPjlzpYYZpyodN89cfDPHYGH
+         UxM7x+PP1zC6foj/+ZRvYEcpKrQV/XtEe8Eu1EwesUmWSoKlGek9Z4GLJNNy+Ld6xLDI
+         UyCTh4NWkOdHwW4jfp7a1ZTuikD3juxKWmSElwCAZvW4WCGqY2Eq74h6lA7Hp7tBZRj0
+         bvKMmB3/Yrmc+6wHusnVHs4YKqg1TLr9ua2wyo0vsmMWeS4DBiQNvYpXkGb/antD1/qh
+         qwLKuySyMGRMD4kboTeUEvIQKahaOdkRMhhbMBgZQZGIYnq325hKqW3OD0zJfwST25q9
+         O+mQ==
+X-Gm-Message-State: APjAAAX6HARxVZEcj+Hhvble8M9UOv6Xpd7ug2yneTOqTsLlBeiAEy7C
+	QS5jK9c2IlbG7Kt7EaNGcHCjXk1A
+X-Google-Smtp-Source: APXvYqxAjdXdwNuJm/kexLdJlW/qrrrhI3zh1gdSTbXg5xCmc2fTXCYK0KFUQhGii8YvlIYhFGGt4A==
+X-Received: by 2002:a6b:e90b:: with SMTP id u11mr11986371iof.14.1576912997475;
+        Fri, 20 Dec 2019 23:23:17 -0800 (PST)
+X-BeenThere: students@iiitvadodara.ac.in
+Received: by 2002:a05:6638:6a1:: with SMTP id d1ls855875jad.10.gmail; Fri, 20
+ Dec 2019 23:23:17 -0800 (PST)
+X-Received: by 2002:a02:8587:: with SMTP id d7mr15340709jai.39.1576912996914;
+        Fri, 20 Dec 2019 23:23:16 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1576912996; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ZjBbwPvpHs9NdIc/qUXCJQbFaP/gOFeetjKk2fKnEeq+BbCuOnTHsea7xp99a9AlMG
+         7SmmNJxjSEqxgF5QDQvjvJQT/E85vqxkC0sx/Ey7OHbwKVOHzYq1l31MyDTDcRG8Nxaj
+         GwoVAj1H9bvfjuv44HIALu7i0Q0hAm+YhWtGV5LQC2Uaa0Vt5HTSZVcKdt+Rsf4IWJ/Z
+         3LUNnRjv3czoliwe7anyzV4yIVn+oCUAumMjFNL0atFWA2FmKSZEPG6K0Dh4tr0qKUZO
+         DrRdaWhiIBWsixEIngPIQQPZlfmXsjWBL9CP2idHm0aWUCyYy+XMUWvcoU9z25Uw6c6l
+         4YBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=iV7s2TVPZs39oHAwyT/ohW4dbo1er5wtsVr91ofDrHY=;
+        b=SWilWkRfyHyjP1rPqvFF2jhDyDVECvKvqwWufovUZHmIpa9oSceUMR4jXn73N9+F+Q
+         +P1rYoCL4jCC0KqRJL9D/yj7iDfSdJvSDmMlv0NWIhT9tHcLKP49fUj3mtp813xcsmyb
+         8j0oAMks16fwBhiUdLEPFoVdx+ipcHlxWrODDBm1iDUxtDeSTNEWfkr7trFYwT248LOY
+         C4X57mY14DtKrXTGBp0hyQvCJPgAgZ/WiOH54vk1B8Bwx3lOp+o3B8vKb4XPMeSZIGeY
+         cd+DTNfPwalhiHmCqBbluc0LnPqSP7RaMMmlXoioiSuWNXoPs+3E5jI55gTn90ZREoVh
+         A6qw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=X50+MxDw;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar@iiitvadodara.ac.in) smtp.mailfrom=registrar@iiitvadodara.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id y4sor8699095ilm.39.2019.12.20.23.23.16
+        for <students@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Fri, 20 Dec 2019 23:23:16 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of registrar@iiitvadodara.ac.in) client-ip=209.85.220.41;
+X-Received: by 2002:a92:ce09:: with SMTP id b9mr15280251ilo.219.1576912996528;
+ Fri, 20 Dec 2019 23:23:16 -0800 (PST)
+MIME-Version: 1.0
+From: Registrar IIITV <registrar@iiitvadodara.ac.in>
+Date: Sat, 21 Dec 2019 12:53:08 +0530
+Message-ID: <CAGb7MUGHZdoRMSB3vgT3TUcJNVH9Oz4JHNGVsp4btaExbFocUQ@mail.gmail.com>
+Subject: Deferred | Hostel Fees (Winter 2019-20 Semester) Payment to Sabar
+ Authorities be Deferred till Intimated by Institute
+To: ug2016@iiitvadodara.ac.in, ug2017@iiitvadodara.ac.in, 
+	UG2018 <ug2018@iiitv.ac.in>, B Tech 2019 <ug2019@iiitvadodara.ac.in>, 
+	students@iiitvadodara.ac.in
+Cc: Director IIITV <director@iiitvadodara.ac.in>, 
+	Dhirendra Sinha <dhirendra.sinha@iiitvadodara.ac.in>, Jyoti Singh <jyoti@iiitvadodara.ac.in>, 
+	Pratik Shah <pratik@iiitvadodara.ac.in>
+Content-Type: multipart/alternative; boundary="000000000000001eae059a31ab26"
+X-Original-Sender: registrar@iiitvadodara.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623
+ header.b=X50+MxDw;       spf=neutral (google.com: 209.85.220.41 is neither
+ permitted nor denied by best guess record for domain of registrar@iiitvadodara.ac.in)
+ smtp.mailfrom=registrar@iiitvadodara.ac.in
+Precedence: list
+Mailing-list: list students@iiitvadodara.ac.in; contact students+owners@iiitvadodara.ac.in
+List-ID: <students.iiitvadodara.ac.in>
+X-Spam-Checked-In-Group: students@iiitvadodara.ac.in
+X-Google-Group-Id: 474912623462
+List-Post: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/post>,
+ <mailto:students@iiitvadodara.ac.in>
+List-Help: <https://support.google.com/a/iiitvadodara.ac.in/bin/topic.py?topic=25838>,
+ <mailto:students+help@iiitvadodara.ac.in>
+List-Archive: <https://groups.google.com/a/iiitvadodara.ac.in/group/students/>
+List-Unsubscribe: <mailto:googlegroups-manage+474912623462+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iiitvadodara.ac.in/group/students/subscribe>
+
+--000000000000001eae059a31ab26
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Students,
+
+Greetings!
+
+Due to Administrative reasons you are advised *not to pay Hostel Fees
+(Winter 2019-20 Semester) to Sabar Authorities till intimated by the
+Institute.* Dates of payment will be intimated to you separately.
+
+All those who have paid, need not worry.
+
+All those who have to take Bank loan etc can get the draft made (or payment
+made to Institute) in the name of Institute, we will reimburse you the
+amount so that you can pay Sabar Authorities at appropriate times.
+
+Best Regards
+
+Registrar
+
+--000000000000001eae059a31ab26
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr"><p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif"></p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">Dear Students,</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">Greetings!</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">Due to Administrative reasons you are advised <b><font color="#ff0000">not to pay Hostel
+Fees </font>(Winter 2019-20 Semester) <font color="#ff0000">to Sabar Authorities</font> till intimated by the
+Institute.</b> Dates of payment will be intimated to you separately.</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">All those who have paid, need not worry.</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">All those who have to take Bank loan etc can get the draft
+made (or payment made to Institute) in the name of Institute, we will reimburse you the amount so that you can
+pay Sabar Authorities at appropriate times.</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">Best Regards</p>
+
+<p class="MsoNormal" style="margin:0cm 0cm 8pt;line-height:107%;font-size:11pt;font-family:Calibri,sans-serif">Registrar</p></div>
+
+--000000000000001eae059a31ab26--

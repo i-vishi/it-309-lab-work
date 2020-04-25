@@ -1,0 +1,264 @@
+Delivered-To: 201752009@iiitvadodara.ac.in
+Received: by 2002:ad5:4282:0:0:0:0:0 with SMTP id z2csp18612553imn;
+        Wed, 1 Jan 2020 21:50:21 -0800 (PST)
+X-Received: by 2002:a1f:18b:: with SMTP id 133mr46185381vkb.73.1577944221596;
+        Wed, 01 Jan 2020 21:50:21 -0800 (PST)
+ARC-Seal: i=3; a=rsa-sha256; t=1577944221; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=VBYIDG9OxbhJbKAkXplt7BjDAdqSQBf/dVzuhXlibmZvnnQB3vDVbGk7LCl5Po0c2L
+         eSCqVsA3EVCTVItDS2q/h4bH+7hMWbUDqB7FK9HLbGhJu00BeZpU/S/fJf5BhWriRJT2
+         9fqDjvo+bFbT8wny+iORZ16nkWaVLgKuh50Nm48RcJlZIbVTe1Pl2EDih/sJf3j8k+Ly
+         OjHsXROUAtHPHN2R693Ae3qKifevY6Sls2CvdOFE5C4LsoNVsm/DH82cpk7c6Y2oi7iO
+         xijvrZaYYQz+10Yj8ndTcLjny5kPJDfD0gvqMfN8dgVZjGzTHSPI7rHleiFLi+IrcDo+
+         SFIA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :in-reply-to:references:mime-version:dkim-signature;
+        bh=4owIn5LozUjRsCin8dgqpUggFI8hJkCRvKYwx361g3c=;
+        b=EigPszebbG921ecTvZX9Jf91EkEsWcO9BlK+WuDVU5hcWHoeVBpm45eRSLs7TlJY3j
+         P1mnYsEzXy3YgF7CDL6BhmGsDpJ6Ai4U0ML7f+q+qXJxmm7xVdRCPdKLp0TCOWI6Kv0d
+         zhlhmWsvq0uTFWyhTrLuHdUTB1recEIEbFnlhOr3wwaX6DBo+WinIYirHyYmS4wizorx
+         /Iv6pqKFFwEsKCfc6uoGCYjyoN1ZTPBwJtamA6CILwq351ehXBsQHnh8MZkyHnhJXdh7
+         NPaL0wVpSbcJu/HoMxT4KU8+NRl2PCoZnKFBzbRlLCBzDtkIN4TaheAGXBi0AWD4tMPM
+         R+Nw==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=ZnD4mRro;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbc67bh4vvacbbhejw3yakgqe4y5baka@iiitvadodara.ac.in) smtp.mailfrom=ug2017+bncBC67BH4VVACBBHEJW3YAKGQE4Y5BAKA@iiitvadodara.ac.in
+Return-Path: <ug2017+bncBC67BH4VVACBBHEJW3YAKGQE4Y5BAKA@iiitvadodara.ac.in>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id a8sor23468843uak.27.2020.01.01.21.50.21
+        for <201752009@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Wed, 01 Jan 2020 21:50:21 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbc67bh4vvacbbhejw3yakgqe4y5baka@iiitvadodara.ac.in) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=ZnD4mRro;
+       arc=pass (i=2 dkim=pass dkdomain=iiitvadodara-ac-in.20150623.gappssmtp.com);
+       spf=neutral (google.com: 209.85.220.69 is neither permitted nor denied by best guess record for domain of ug2017+bncbc67bh4vvacbbhejw3yakgqe4y5baka@iiitvadodara.ac.in) smtp.mailfrom=ug2017+bncBC67BH4VVACBBHEJW3YAKGQE4Y5BAKA@iiitvadodara.ac.in
+ARC-Seal: i=2; a=rsa-sha256; t=1577944221; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=iBRiE+/Tr9zMghthix+0QpUjE8sCgYgcdaYp8xHLD7NciTjVV5ZD6VKFE2Y5TpBwT1
+         jtMTa7NUORfbYZqHMda1CV/AHIHyabMD/gkUyDNfJZ4i9bLSq7Bninhw7ZjSRsdy2EyF
+         WOPXRr77zQnI0RaZL2xDx32itPIUPLL2ss57SfIEsqmqcZaNVYnWkQWNwLvx2fZxqx19
+         IcG7ZWVJirUS77NF2G1BDGd93B8uPpG+q8ZBdqprDDMVoHJpJzKWIqnwYl3K1PvppGWq
+         7OUVUfjKoymD6MUrlHXS2FJgjFe+nuL6rYKTjfples/i8G3GFMA/KR8JK9GPWUUokIic
+         n4jQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:cc:to:subject:message-id:date:from
+         :in-reply-to:references:mime-version:dkim-signature;
+        bh=4owIn5LozUjRsCin8dgqpUggFI8hJkCRvKYwx361g3c=;
+        b=BqF6CYrgT9nYSeSRYLVHVViRvDHnv2N2kc7QR69GNax7dBp57eaBObcrAPbVJ3NSdD
+         TQDe+lTuzjFYpwlQ/t1PrMPPSYkgfiMc5zpf0tnbV6w5xCul+SB531GkQEbBCrZzIgTn
+         1DNnWMvv5TXb18ElCkWGXHavjRZyi/j8uaijYoA2tadkVqEzAjUagvr7Vk7jM/fyL9kA
+         Nb2+SAwgidRcyzQIK/+JH2gqlzH3J1wb1hckwEIjUMCP0/HtzpiooIxhusp/E3un589m
+         YLEa+WP931T/oQaDuu9lvOl9NfzVqN4JWTH24kqeBRWL2ET78BSR1qmIeT1vXdinrkpN
+         V+kQ==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=yOPnsXqb;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of director@iiitvadodara.ac.in) smtp.mailfrom=director@iiitvadodara.ac.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=iiitvadodara-ac-in.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc:x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=4owIn5LozUjRsCin8dgqpUggFI8hJkCRvKYwx361g3c=;
+        b=ZnD4mRro0CwZx9RH1H0IS9dbUKo/BDty7s1Zwxos+7lI9g+1ZklvQkojujT4sfm8Bn
+         lU6qW64/nGViwCttX0sdRuEN7ZEA3xYbBRqcPBp8W0YqOFv/FhNJ+Txd0tdafK+jDVgG
+         w9sgjuwc210hKpQymEkhVyTvepLLP3wGltUkMRmWp3oFgqTpdjuQwGvMEcQxdCNdqTz8
+         A26lkT+mXADTlML7C4dDgI9xPykpfR/JpRRD/YAwzho4ZXDRhsvb5Mebfkhj/0BzPnPD
+         UCdwzep3ylx7sWlsqYoBcntXXNO3bEnDpkHFAqDeVmd0qJHLjzvHeD9pn/ORxixx5ERH
+         bmRw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=4owIn5LozUjRsCin8dgqpUggFI8hJkCRvKYwx361g3c=;
+        b=EN1zo9gO4+T0T3OHJPmwbvaJLbVrng7EPZh276YbD1GgZa9QPaR8+1kKRHTyRRwT3a
+         D9vJ1clU+QoSoepLwOt+/K2Gdd/SnII8dRUEQtVNnbEBmS/XC7yAW82Y8TfQFH/Zy7yU
+         9Lu08MGlSdDadsEhW8DROEvEBinBwEUc6yuaBeatgFWesrsFnIRwkHRYN5fXAPVGedDC
+         N9YipwZxcYHJSgvO/5zKsAQ/sRves6HPPQLQHXEVAhqqmgV3DPyRdMDR1pJG1Og0XyyI
+         waiGzW8jCuUz8AMg+4yI+lCZtC1qOo+QmlJsxsILEql+y9+WH9OUghmGO6k5LDOrpVt5
+         ax8w==
+X-Gm-Message-State: APjAAAWjQUchnRLaTY0qdJFu5wm8OYrVga4DEb2gxKmy0kNYWJDDThmD
+	Y8m7A2oy8k4nKRZNSorW8kfbbdkv
+X-Google-Smtp-Source: APXvYqyVoyhUWelhI/oV+iuOSVz5P4m1GwY4YH+Io5w78TEwdCJ+CsBlW3dl9ucnaLktXmN996Xglw==
+X-Received: by 2002:ab0:6558:: with SMTP id x24mr42991391uap.130.1577944220194;
+        Wed, 01 Jan 2020 21:50:20 -0800 (PST)
+X-BeenThere: ug2017@iiitvadodara.ac.in
+Received: by 2002:a05:6102:24d:: with SMTP id a13ls2573891vsq.11.gmail; Wed,
+ 01 Jan 2020 21:50:19 -0800 (PST)
+X-Received: by 2002:a05:6102:30a7:: with SMTP id y7mr39935662vsd.212.1577944219725;
+        Wed, 01 Jan 2020 21:50:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1577944219; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FRTAXhtugZnw5YxClcUNK+7Ns1dJXdrinuzaQgzvuo0DAv+GIT+1OXCWnL2AD1imvv
+         MQ51pbN3pLyQF06bxDAS3M8/oX5xRUXt6+6EEtJusOuiUP4zIh4waYOESVS2wB0O2oqD
+         Kt3AAGtrzy5Ps36v5IowP/LMK+q5vC+x2/dO0DIkG9P9xdKI47p4StMLpMNUb4uWa2r0
+         AECRx2iEgEUVjCjyO0Any0DPbdoczgEZzbhsRI94dhORrr79DmjOhPTBOFnW1r32D5mR
+         /IGjBzQJ8ErSgphVbNGFuyASAiY1uoSu43JYPYi63PmbKymbJGQ7c/TwmVHvjLRs7uyU
+         rsbQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=4owIn5LozUjRsCin8dgqpUggFI8hJkCRvKYwx361g3c=;
+        b=eOefIPXYZIrXP9j16+tXmW9Fr1oDYRR8TGxD/HElxL9Y2hJIPFuSJaF28FzXaO8JRG
+         YNkPirJgeCshSItomsBrAy04619CkjGBp9P1GFmD05D30dNXSonAancrA8DI5ZP7zbu6
+         wjPWYccPMHghWBEJbljC0tFYGex+AnPbkEHRtossfX181T/hTjCJTQkCNqiwpXirScp7
+         gSY3O1EAGtlUNwHSi9EKz922726wmP5k7irnWdqS5p5Gl7/KSIZNL7IpH0jZlXL5hMpJ
+         K+zT5eqZZi8DY4L7NrBCSuIBtcfmT6Xcn0L5LJWsthpE4bR5bjPTNuGUQsn/c5goQlsg
+         mzWw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623 header.b=yOPnsXqb;
+       spf=neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of director@iiitvadodara.ac.in) smtp.mailfrom=director@iiitvadodara.ac.in
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id r12sor14993102vsk.30.2020.01.01.21.50.19
+        for <ug2017@iiitvadodara.ac.in>
+        (Google Transport Security);
+        Wed, 01 Jan 2020 21:50:19 -0800 (PST)
+Received-SPF: neutral (google.com: 209.85.220.41 is neither permitted nor denied by best guess record for domain of director@iiitvadodara.ac.in) client-ip=209.85.220.41;
+X-Received: by 2002:a67:ec12:: with SMTP id d18mr36420660vso.129.1577944219181;
+ Wed, 01 Jan 2020 21:50:19 -0800 (PST)
+MIME-Version: 1.0
+References: <CAD7ecd_S8agOyRfnwrhxm0yJvHQr-UgGMgbbudT0R_ZL93pxUA@mail.gmail.com>
+In-Reply-To: <CAD7ecd_S8agOyRfnwrhxm0yJvHQr-UgGMgbbudT0R_ZL93pxUA@mail.gmail.com>
+From: Director IIITV <director@iiitvadodara.ac.in>
+Date: Thu, 2 Jan 2020 11:20:08 +0530
+Message-ID: <CAD7ecd_cg1e0pnktyOSL-pX+wi4_JO0v-usfYLBdDa62=1Rgdg@mail.gmail.com>
+Subject: Fwd: Welcome to the new semester
+To: ug2017@iiitvadodara.ac.in, UG2018 <ug2018@iiitvadodara.ac.in>, 
+	ug2016@iiitvadodara.ac.in
+Cc: IIITV Assistant Registrar <ar_academics@iiitvadodara.ac.in>, 
+	Ravi Chugh <registrar@iiitvadodara.ac.in>, Pratik Shah <pratik@iiitvadodara.ac.in>
+Content-Type: multipart/alternative; boundary="000000000000a8fd71059b21c47c"
+X-Original-Sender: director@iiitvadodara.ac.in
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@iiitvadodara-ac-in.20150623.gappssmtp.com header.s=20150623
+ header.b=yOPnsXqb;       spf=neutral (google.com: 209.85.220.41 is neither
+ permitted nor denied by best guess record for domain of director@iiitvadodara.ac.in)
+ smtp.mailfrom=director@iiitvadodara.ac.in
+Precedence: list
+Mailing-list: list ug2017@iiitvadodara.ac.in; contact ug2017+owners@iiitvadodara.ac.in
+List-ID: <ug2017.iiitvadodara.ac.in>
+X-Spam-Checked-In-Group: ug2017@iiitvadodara.ac.in
+X-Google-Group-Id: 131901427600
+List-Post: <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/post>, <mailto:ug2017@iiitvadodara.ac.in>
+List-Help: <https://support.google.com/a/iiitvadodara.ac.in/bin/topic.py?topic=25838>,
+ <mailto:ug2017+help@iiitvadodara.ac.in>
+List-Archive: <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/>
+List-Unsubscribe: <mailto:googlegroups-manage+131901427600+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/iiitvadodara.ac.in/group/ug2017/subscribe>
+
+--000000000000a8fd71059b21c47c
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Students,
+
+Welcome to the new semester. The academic program has started and it will
+gain momentum. I am sure you will have good academic atmosphere and
+academic outcome this semester.
+
+I like to iterate that attendance is a very important part of the learning
+process. As per our academic regulations, maintaining 75% attendance is
+compulsory. In last semester(Autumn 2019-20), many students failed to
+maintain the requisite minimum attendance. The senate has taken the issue
+very adversely. Few changes have been incorporated in the attendance
+policy. These include
+
+   1. Attendance is compulsory and maintaining 75% attendance is important
+   for everyone.
+   2. Students having attendance between 60% to 75% will be awarded 1 grade
+   penalty on completion of evaluation of the course. This includes grade DD
+   to be converted to F.
+   3. Students securing attendance below 60% in any course will be
+   unregistered from the course. They'll have to repeat the course in
+   subsequent semesters.
+   4. Attendance on medical grounds will only be considered in exceptional
+   circumstances & casual medical leave will be no more considered.
+
+The detailed rules and regulations will be formally circulated shortly.
+This is an early information and all are advised to adhere to these rules.
+
+*Regards,*
+With best wishes
+
+Sarat Patra
+
+==================================================
+Director, IIIT-Vadodara
+c/o Block No.9, Government Engineering College,
+Sector-28, Gandhinagar, Gujarat - 382028
+Ph: 079-23977501 (O); http://iiitvadodara.ac.in/faculty/skp001.php
+===================================================
+
+--000000000000a8fd71059b21c47c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div dir=3D"ltr" class=3D"gmail_signature" data-smart=
+mail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"=
+><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div d=
+ir=3D"ltr"><div dir=3D"ltr">Dear Students,<br></div></div></div></div></div=
+></div></div></div></div></div></div><div class=3D"gmail_quote"><div dir=3D=
+"ltr"><div><br></div><div>Welcome to the new semester. The academic program=
+ has started and it will gain momentum. I am sure you will have good academ=
+ic atmosphere and academic outcome=C2=A0this semester.</div><div><br></div>=
+<div>I
+ like to iterate that attendance is a very important part of the=20
+learning process. As per our academic regulations, maintaining 75%=20
+attendance is compulsory. In last semester(Autumn 2019-20), many=20
+students failed to maintain the requisite minimum attendance. The=20
+senate has taken the issue very adversely. Few changes have been=20
+incorporated in the attendance policy. These include</div><div><ol><li>Atte=
+ndance is compulsory and maintaining 75% attendance is important=C2=A0 for =
+everyone.</li><li>Students
+ having attendance between 60% to 75% will be awarded 1 grade penalty on
+ completion of evaluation of the course. This includes grade DD to be=20
+converted to F.</li><li>Students securing attendance below 60% in any=20
+course will be unregistered from the course. They&#39;ll have to repeat the=
+=20
+course in subsequent semesters.</li><li>Attendance on medical grounds=20
+will only be considered in exceptional circumstances &amp; casual=20
+medical leave will be no more considered.</li></ol><div>The detailed=20
+rules and regulations will be formally circulated shortly. This is an early=
+=20
+information and all are advised to adhere to these rules.<br></div></div><d=
+iv><br></div><div><div><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"l=
+tr"><span style=3D"color:rgb(116,27,71)"><i><span style=3D"background-color=
+:rgb(194,123,160)"><div><div><div><div dir=3D"ltr"><div><div><div><div><div=
+>Regards,</div></div></div></div></div></div></div></div></div></span></i><=
+/span></div></div></div></div></div></div><div><div dir=3D"ltr" data-smartm=
+ail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div di=
+r=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"=
+><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><di=
+v><font>With best wishes<br></font></div><div><font><br>Sarat Patra<br></fo=
+nt></div><div><font><br>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D</font></div><div><span style=3D"color:rgb(32,18,77=
+)"><span style=3D"background-color:rgb(255,255,255)">Director, IIIT-Vadodar=
+a</span></span><span style=3D"color:rgb(32,18,77)"><span style=3D"backgroun=
+d-color:rgb(255,255,255)"><br></span></span></div></div></div><div dir=3D"l=
+tr"><span style=3D"background-color:rgb(0,0,255)"><span style=3D"background=
+-color:rgb(255,255,255)"><span style=3D"color:rgb(32,18,77)">c/o Block No.9=
+,=C2=A0Government Engineering College,<br>Sector-28, Gandhinagar,=C2=A0Guja=
+rat - 382028
+</span></span></span></div><div dir=3D"ltr"><span style=3D"background-color=
+:rgb(0,0,255)"><span style=3D"background-color:rgb(255,255,255)"><span styl=
+e=3D"color:rgb(32,18,77)"><span style=3D"color:rgb(32,18,77)"><span style=
+=3D"background-color:rgb(255,255,255)">Ph: 079-23977501</span></span> (O); =
+<a href=3D"http://iiitvadodara.ac.in/faculty/skp001.php" target=3D"_blank">=
+http://iiitvadodara.ac.in/faculty/skp001.php</a></span></span></span></div>=
+<div dir=3D"ltr"><font>=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D</font></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div>
+</div></div>
+
+--000000000000a8fd71059b21c47c--
